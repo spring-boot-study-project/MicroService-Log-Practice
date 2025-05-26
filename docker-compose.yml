@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.1 # Using a recent version
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g # Adjust memory as needed
+      - xpack.security.enabled=false # For simplicity in this setup. Consider security for production.
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - elk_network
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:8.11.1
+    container_name: logstash
+    ports:
+      # Port 5000 is often used for TCP/UDP input, but we're focusing on Kafka.
+      # If you need to expose a port for Beats or other inputs, add them here.
+      # e.g., - "5044:5044"
+      - "9600:9600" # For Logstash monitoring API (optional)
+    volumes:
+      - ./elk-config/logstash/pipeline:/usr/share/logstash/pipeline:ro
+      # If you have custom patterns, you might mount them too:
+      # - ./elk-config/logstash/patterns:/usr/share/logstash/patterns:ro
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk_network
+    # Add environment variables if needed for Logstash, e.g., Kafka broker outside Docker
+    # environment:
+    #   - KAFKA_BROKER_URL=host.docker.internal:9092
+
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.1
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk_network
+
+volumes:
+  elasticsearch_data:
+    driver: local
+
+networks:
+  elk_network:
+    driver: bridge
