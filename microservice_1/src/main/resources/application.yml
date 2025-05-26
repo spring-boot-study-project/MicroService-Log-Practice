@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: microservice-1
+
+kafka:
+  bootstrap:
+    servers: localhost:9092 # Or your Kafka broker address
