@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class ServiceController {
 
-    @GetMapping("/service-1")
+    @GetMapping("/service-3")
     public String Hello() {
         return "third-service-return";
     }

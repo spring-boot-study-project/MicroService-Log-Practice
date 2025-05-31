@@ -1,7 +1,20 @@
+server:
+    port: 8080
+
 spring:
-  application:
-    name: microservice-1
+    main:
+        web-application-type: servlet
+        
+    profiles:
+        active: dev
+    
+    application:
+        name: microservice-1
+    
+    config:
+        import:
+            - security/application-db.yml
 
 kafka:
   bootstrap:
-    servers: localhost:9092 # Or your Kafka broker address
+    servers: localhost:9092

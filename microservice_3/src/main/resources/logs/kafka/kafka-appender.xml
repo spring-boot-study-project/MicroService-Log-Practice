@@ -1,0 +1,13 @@
+<included>
+    <appender name="KAFKA_LOGSTASH" class="com.github.danielwegener.logback.kafka.KafkaAppender">
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
+            <customFields>{"app_name":"${APP_NAME}","profile":"${spring.profiles.active}"}</customFields>
+            <includeCallerData>false</includeCallerData>
+        </encoder>
+        <topic>${KAFKA_LOG_TOPIC}</topic>
+        <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy"/>
+        <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy"/>
+        <producerConfig>bootstrap.servers=${LOGBACK_KAFKA_BROKERS}</producerConfig>
+        <shutdownGracePeriod>PT30S</shutdownGracePeriod>
+    </appender>
+</included>

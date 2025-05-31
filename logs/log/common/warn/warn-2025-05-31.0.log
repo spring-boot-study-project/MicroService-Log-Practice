@@ -1,0 +1,3 @@
+2025-05-31 22:11:18.193 WARN  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {microservice_2-logs=LEADER_NOT_AVAILABLE}
+2025-05-31 22:21:17.520 WARN  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {microservice_1-logs=LEADER_NOT_AVAILABLE}
+2025-05-31 22:21:30.763 WARN  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {microservice_2-logs=LEADER_NOT_AVAILABLE}

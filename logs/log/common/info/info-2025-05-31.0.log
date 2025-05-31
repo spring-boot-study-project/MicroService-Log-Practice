@@ -1,0 +1,849 @@
+2025-05-31 20:19:07.993 INFO  [,] [main] c.s.m.Microservice1Application - Starting Microservice1Application using Java 21.0.6 with PID 21080 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_1\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 20:19:08.044 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 20:19:08.109 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 20:19:08.249 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 20:19:08.354 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 20:19:08.356 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 20:19:08.356 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748690348352
+2025-05-31 20:19:08.799 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: Av_5yF96REehAmz3STWe4Q
+2025-05-31 20:19:08.799 INFO  [,] [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-05-31 20:19:08.815 INFO  [,] [main] c.s.m.Microservice1Application - The following 1 profile is active: "dev"
+2025-05-31 20:19:09.471 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 20:19:09.516 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 JPA repository interfaces.
+2025-05-31 20:19:10.060 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-31 20:19:10.078 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-31 20:19:10.079 INFO  [,] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 20:19:10.080 INFO  [,] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31 20:19:10.144 INFO  [,] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 20:19:10.144 INFO  [,] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1269 ms
+2025-05-31 20:19:10.327 INFO  [,] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 20:19:10.403 INFO  [,] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-31 20:19:10.446 INFO  [,] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-31 20:19:10.791 INFO  [,] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 20:19:10.817 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 20:19:10.990 INFO  [,] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:microservice_1 user=SA
+2025-05-31 20:19:10.991 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 20:19:11.312 INFO  [,] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 20:19:11.317 INFO  [,] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 20:19:11.803 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-31 20:19:11.813 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-31 20:19:11.824 INFO  [,] [main] c.s.m.Microservice1Application - Started Microservice1Application in 4.898 seconds (process running for 5.384)
+2025-05-31 20:19:36.859 INFO  [,] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31 20:19:36.860 INFO  [,] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-31 20:19:36.862 INFO  [,] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-05-31 20:19:36.898 INFO  [,] [http-nio-8080-exec-2] c.s.m.controller.ServiceController - Hello World
+2025-05-31 20:28:08.877 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 20:38:08.842 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 20:52:32.228 INFO  [,] [main] c.s.m.Microservice1Application - Starting Microservice1Application using Java 21.0.6 with PID 11728 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_1\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 20:52:32.266 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 20:52:32.302 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 20:52:32.422 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 20:52:32.514 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 20:52:32.517 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 20:52:32.517 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748692352511
+2025-05-31 20:52:32.882 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: KxcxpRlaQ0uCLp5NwVaOQg
+2025-05-31 20:52:32.882 INFO  [,] [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-05-31 20:52:32.895 INFO  [,] [main] c.s.m.Microservice1Application - The following 1 profile is active: "dev"
+2025-05-31 20:52:33.910 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 20:52:33.963 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-05-31 20:52:34.851 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-31 20:52:34.873 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-31 20:52:34.875 INFO  [,] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 20:52:34.876 INFO  [,] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31 20:52:34.955 INFO  [,] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 20:52:34.956 INFO  [,] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1992 ms
+2025-05-31 20:52:35.185 INFO  [,] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 20:52:35.302 INFO  [,] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-31 20:52:35.382 INFO  [,] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-31 20:52:35.845 INFO  [,] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 20:52:35.884 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 20:52:36.105 INFO  [,] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:microservice_1 user=SA
+2025-05-31 20:52:36.108 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 20:52:36.536 INFO  [,] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 20:52:36.543 INFO  [,] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 20:52:37.151 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-31 20:52:37.163 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-31 20:52:37.174 INFO  [,] [main] c.s.m.Microservice1Application - Started Microservice1Application in 6.087 seconds (process running for 6.635)
+2025-05-31 21:01:32.942 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 21:11:32.916 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 22:00:50.834 INFO  [,] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-31 22:00:50.847 INFO  [,] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-05-31 22:00:50.865 INFO  [,] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2025-05-31 22:00:50.918 INFO  [,] [http-nio-8080-exec-2] c.s.m.controller.ServiceController - Hello World
+2025-05-31 22:01:16.760 INFO  [,] [http-nio-8080-exec-3] c.s.m.controller.ServiceController - Hello World
+2025-05-31 22:01:18.301 INFO  [,] [http-nio-8080-exec-4] c.s.m.controller.ServiceController - Hello World
+2025-05-31 22:11:17.406 INFO  [,] [main] c.s.m.Microservice2Application - Starting Microservice2Application using Java 21.0.6 with PID 8632 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_2\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 22:11:17.451 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 22:11:17.506 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 22:11:17.618 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 22:11:17.705 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 22:11:17.709 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 22:11:17.709 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748697077703
+2025-05-31 22:11:18.195 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: KxcxpRlaQ0uCLp5NwVaOQg
+2025-05-31 22:11:45.034 INFO  [,] [main] c.s.m.Microservice2Application - Starting Microservice2Application using Java 21.0.6 with PID 2696 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_2\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 22:11:45.083 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 22:11:45.126 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 22:11:45.249 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 22:11:45.355 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 22:11:45.357 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 22:11:45.357 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748697105353
+2025-05-31 22:11:45.684 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: KxcxpRlaQ0uCLp5NwVaOQg
+2025-05-31 22:11:45.686 INFO  [,] [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2 with epoch 0
+2025-05-31 22:11:45.701 INFO  [,] [main] c.s.m.Microservice2Application - The following 1 profile is active: "dev"
+2025-05-31 22:11:46.397 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 22:11:46.428 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2025-05-31 22:11:46.974 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-05-31 22:11:46.986 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-05-31 22:11:46.988 INFO  [,] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 22:11:46.989 INFO  [,] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31 22:11:47.045 INFO  [,] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 22:11:47.045 INFO  [,] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1270 ms
+2025-05-31 22:11:47.266 INFO  [,] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 22:11:47.352 INFO  [,] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-31 22:11:47.399 INFO  [,] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-31 22:11:47.815 INFO  [,] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 22:11:47.850 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 22:11:48.082 INFO  [,] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:microservice_2 user=SA
+2025-05-31 22:11:48.085 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 22:11:48.559 INFO  [,] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 22:11:48.565 INFO  [,] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 22:11:49.473 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-05-31 22:11:49.485 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-05-31 22:11:49.502 INFO  [,] [main] c.s.m.Microservice2Application - Started Microservice2Application in 5.428 seconds (process running for 5.832)
+2025-05-31 22:21:16.227 INFO  [,] [main] c.s.m.Microservice1Application - Starting Microservice1Application using Java 21.0.6 with PID 3148 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_1\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 22:21:16.385 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 22:21:16.461 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 22:21:16.650 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 22:21:16.797 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 22:21:16.798 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 22:21:16.799 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748697676793
+2025-05-31 22:21:17.525 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: GtH1UkRnRteDsqPu5Hc71A
+2025-05-31 22:21:29.323 INFO  [,] [main] c.s.m.Microservice2Application - Starting Microservice2Application using Java 21.0.6 with PID 20632 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_2\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 22:21:29.460 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 22:21:29.564 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 22:21:29.795 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 22:21:29.963 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 22:21:29.965 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 22:21:29.966 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748697689961
+2025-05-31 22:21:30.765 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: GtH1UkRnRteDsqPu5Hc71A
+2025-05-31 22:21:33.469 INFO  [,] [main] c.s.m.Microservice3Application - Starting Microservice3Application using Java 21.0.6 with PID 24208 (C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice\microservice_3\bin\main started by dong5 in C:\Users\dong5\OneDrive\바탕 화면\GitClone\MicroService-Log-Practice)
+2025-05-31 22:21:33.541 INFO  [,] [main] o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+
+2025-05-31 22:21:33.605 INFO  [,] [main] o.a.k.c.t.i.KafkaMetricsCollector - initializing Kafka metrics collector
+2025-05-31 22:21:33.783 INFO  [,] [main] o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2025-05-31 22:21:33.912 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.7.0
+2025-05-31 22:21:33.914 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 2ae524ed625438c5
+2025-05-31 22:21:33.914 INFO  [,] [main] o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1748697693908
+2025-05-31 22:21:34.422 INFO  [,] [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: GtH1UkRnRteDsqPu5Hc71A
+2025-05-31 22:21:34.423 INFO  [,] [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2 with epoch 0
+2025-05-31 22:21:34.447 INFO  [,] [main] c.s.m.Microservice3Application - The following 1 profile is active: "dev"
+2025-05-31 22:21:35.460 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 22:21:35.520 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+2025-05-31 22:21:36.496 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2025-05-31 22:21:36.516 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2025-05-31 22:21:36.519 INFO  [,] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 22:21:36.520 INFO  [,] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31 22:21:36.618 INFO  [,] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 22:21:36.619 INFO  [,] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2074 ms
+2025-05-31 22:21:36.924 INFO  [,] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 22:21:37.015 INFO  [,] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-31 22:21:37.108 INFO  [,] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-31 22:21:37.683 INFO  [,] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 22:21:37.725 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 22:21:37.990 INFO  [,] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:microservice_3 user=SA
+2025-05-31 22:21:37.993 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 22:21:38.530 INFO  [,] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 22:21:38.541 INFO  [,] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 22:21:39.706 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2025-05-31 22:21:39.727 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2025-05-31 22:21:39.769 INFO  [,] [main] c.s.m.Microservice3Application - Started Microservice3Application in 7.466 seconds (process running for 8.142)
+2025-05-31 22:22:16.811 INFO  [,] [main] c.s.m.Microservice1Application - The following 1 profile is active: "dev"
+2025-05-31 22:22:17.533 INFO  [,] [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0
+2025-05-31 22:22:29.980 INFO  [,] [main] c.s.m.Microservice2Application - The following 1 profile is active: "dev"
+2025-05-31 22:22:30.777 INFO  [,] [kafka-producer-network-thread | producer-1] o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 1 with epoch 0
+2025-05-31 22:23:17.537 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Disconnecting from node 1 due to request timeout.
+2025-05-31 22:23:18.149 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 22:23:30.784 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Disconnecting from node 1 due to request timeout.
+2025-05-31 22:23:31.358 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-31 22:24:17.540 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 4 due to node 1 being disconnected (elapsed time since creation: 60003ms, elapsed time since send: 60003ms, request timeout: 30000ms)
+2025-05-31 22:24:18.181 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+2025-05-31 22:24:30.800 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Cancelled in-flight API_VERSIONS request with correlation id 4 due to node 1 being disconnected (elapsed time since creation: 60008ms, elapsed time since send: 60008ms, request timeout: 30000ms)
+2025-05-31 22:24:31.384 INFO  [,] [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2025-05-31 22:25:18.318 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-05-31 22:25:18.338 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-05-31 22:25:18.341 INFO  [,] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 22:25:18.341 INFO  [,] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31 22:25:18.412 INFO  [,] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 22:25:18.413 INFO  [,] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 120840 ms
+2025-05-31 22:25:18.706 INFO  [,] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 22:25:18.785 INFO  [,] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-31 22:25:18.848 INFO  [,] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-31 22:25:19.316 INFO  [,] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 22:25:19.352 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 22:25:19.572 INFO  [,] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:microservice_1 user=SA
+2025-05-31 22:25:19.575 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 22:25:19.960 INFO  [,] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 22:25:19.966 INFO  [,] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 22:25:20.687 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-05-31 22:25:20.706 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-05-31 22:25:20.723 INFO  [,] [main] c.s.m.Microservice1Application - Started Microservice1Application in 246.279 seconds (process running for 247.13)
+2025-05-31 22:25:31.409 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2025-05-31 22:25:31.426 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2025-05-31 22:25:31.428 INFO  [,] [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-05-31 22:25:31.428 INFO  [,] [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.24]
+2025-05-31 22:25:31.496 INFO  [,] [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-05-31 22:25:31.497 INFO  [,] [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 120680 ms
+2025-05-31 22:25:31.756 INFO  [,] [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-31 22:25:31.831 INFO  [,] [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-05-31 22:25:31.873 INFO  [,] [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-05-31 22:25:32.296 INFO  [,] [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-31 22:25:32.336 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-05-31 22:25:32.518 INFO  [,] [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:microservice_2 user=SA
+2025-05-31 22:25:32.520 INFO  [,] [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-05-31 22:25:32.927 INFO  [,] [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-31 22:25:32.932 INFO  [,] [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-31 22:25:33.553 INFO  [,] [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2025-05-31 22:25:33.565 INFO  [,] [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2025-05-31 22:25:33.581 INFO  [,] [main] c.s.m.Microservice2Application - Started Microservice2Application in 246.616 seconds (process running for 247.31)
+2025-05-31 22:30:34.484 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 22:31:17.709 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 22:31:30.827 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 22:40:34.482 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 22:45:17.805 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
+2025-05-31 22:45:30.888 INFO  [,] [kafka-producer-network-thread | producer-1] o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected.
