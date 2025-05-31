@@ -1,0 +1,5 @@
+# This file is intentionally left blank.
+# It's used to ensure that the elk-config/logstash/pipeline/ directory,
+# which is currently empty, gets committed to the Git repository.
+# Git does not track empty directories, so this placeholder file helps
+# maintain the desired directory structure for the Logstash configuration.
