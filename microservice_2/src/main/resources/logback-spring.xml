@@ -1,49 +1,69 @@
-<configuration>
-    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
-    <springProperty scope="context" name="kafkaBootstrapServers" source="kafka.bootstrap.servers" defaultValue="localhost:9092"/>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
+<Configuration scan="true" scanPeriod="15 seconds">
 
-    <appender name="LOGSTASH" class="com.github.danielwegener.logback.kafka.KafkaAppender">
-        <encoder class="net.logstash.logback.encoder.LogstashEncoder">
-            <providers>
-                <timestamp/>
-                <version/>
-                <message/>
-                <loggerName/>
-                <threadName/>
-                <logLevel/>
-                <callerData/>
-                <stackTrace/>
-                <mdc/> <!-- To include MDC properties like traceId -->
-                <springAppName/> <!-- Custom provider for spring.application.name -->
-            </providers>
-        </encoder>
-        <topic>service-logs</topic>
-        <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy"/>
-        <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy"/>
-        <producerConfig>
-            <bootstrap.servers>\${kafkaBootstrapServers}</bootstrap.servers>
-            <!-- Add other Kafka producer properties as needed -->
-            <!-- Example:
-            <acks>1</acks>
-            <retries>0</retries>
-            <security.protocol>PLAINTEXT</security.protocol>
-            -->
-        </producerConfig>
-    </appender>
+    <springProperty scope="context" name="LOG_PATH" source="logging.file.path" defaultValue="./logs"/>
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="my-app"/>
+    <springProperty scope="context" name="LOGBACK_KAFKA_BROKERS" source="spring.kafka.bootstrap-servers" defaultValue="localhost:9092"/>
+    <springProperty scope="context" name="KAFKA_LOG_TOPIC" source="custom.kafka.log-topic" defaultValue="logback_logs"/>
 
-    <root level="INFO">
-        <appender-ref ref="CONSOLE"/>
-        <appender-ref ref="LOGSTASH"/>
-    </root>
+    <property name="FILE_LOG_PATTERN" 
+        value="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%X{traceId:-},%X{spanId:-}] [%thread] %logger{36} - %msg%n"/>
+    <property name="CONSOLE_LOG_PATTERN" 
+        value="%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) [%X{traceId:-},%X{spanId:-}] [%thread] %cyan(%logger{36}) - %msg%n"/>
+    
+    <springProfile name="local">
+        <include resource="console-appender.xml"/>
+        <root level="INFO">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+    </springProfile>
 
-    <!-- Optional: More specific loggers -->
-    <logger name="org.springframework" level="INFO"/>
-    <logger name="com.springboot.microservice_2" level="DEBUG"/> <!-- Adjust your base package -->
+    <springProfile name="dev">
+        <include resource="logs/common/common-file-info-appender.xml"/>
+        <include resource="logs/common/common-file-warn-appender.xml"/>
+        <include resource="logs/common/common-file-error-appender.xml"/>
+        <include resource="logs/error/file-info-appender.xml"/>
+        <include resource="logs/error/file-warn-appender.xml"/>
+        <include resource="logs/error/file-error-appender.xml"/>
+        <include resource="logs/kafka/kafka-appender.xml"/>
 
-</configuration>
+        <logger additivity="false" level="INFO" name="ErrorLogger">
+            <appender-ref ref="SPECIAL_ERROR"/>
+            <appender-ref ref="SPECIAL_WARN"/>
+            <appender-ref ref="SPECIAL_INFO"/>
+            <appender-ref ref="KAFKA_LOGSTASH"/>
+        </logger>
+
+        <root level="INFO">
+            <appender-ref ref="COMMON-INFO"/>
+            <appender-ref ref="COMMON-WARN"/>
+            <appender-ref ref="COMMON-ERROR"/>
+            <appender-ref ref="KAFKA_LOGSTASH"/>
+        </root>
+    </springProfile>
+
+    <springProfile name="prod">
+        <include resource="logs/common/common-file-info-appender.xml"/>
+        <include resource="logs/common/common-file-warn-appender.xml"/>
+        <include resource="logs/common/common-file-error-appender.xml"/>
+        <include resource="logs/error/file-info-appender.xml"/>
+        <include resource="logs/error/file-warn-appender.xml"/>
+        <include resource="logs/error/file-error-appender.xml"/>
+        <include resource="logs/kafka/kafka-appender.xml"/>
+
+        <logger additivity="false" level="INFO" name="ErrorLogger">
+            <appender-ref ref="SPECIAL_ERROR"/>
+            <appender-ref ref="SPECIAL_WARN"/>
+            <appender-ref ref="SPECIAL_INFO"/>
+            <appender-ref ref="KAFKA_LOGSTASH"/>
+        </logger>
+
+        <root level="INFO">
+            <appender-ref ref="COMMON-INFO"/>
+            <appender-ref ref="COMMON-WARN"/>
+            <appender-ref ref="COMMON-ERROR"/>
+            <appender-ref ref="KAFKA_LOGSTASH"/>
+        </root>
+    </springProfile>
+</Configuration>

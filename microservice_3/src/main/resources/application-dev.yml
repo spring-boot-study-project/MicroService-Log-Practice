@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:microservice_3
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+        hbm2ddl.auto: create
+        default_batch_fetch_size: 100
+        database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    show-sql: true
+  
+  kafka:
+    bootstrap-servers: localhost:9092
+
+api:
+  uri: http://localhost:8082
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: info
+        level: info
+
+custom:
+  kafka:
+    log-topic: microservice_3-logs
